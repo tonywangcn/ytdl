@@ -157,12 +157,12 @@ func (c *Client) getVideoInfoFromHTML(cx context.Context, id string, html []byte
 	} else {
 		log.Debug().Msg("Unable to extract json from default url, trying embedded url")
 
-		embeddedInfo, err := c.getPlayerConfigFromEmbedded(cx, id)
-		if err != nil {
-			return nil, err
-		}
+// 		embeddedInfo, err := c.getPlayerConfigFromEmbedded(cx, id)
+// 		if err != nil {
+// 			return nil, err
+// 		}
 
-		info.htmlPlayerFile = embeddedInfo.Assets.JS
+// 		info.htmlPlayerFile = embeddedInfo.Assets.JS
 
 		query := url.Values{
 			"video_id": []string{id},
